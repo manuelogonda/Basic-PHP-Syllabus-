@@ -52,7 +52,7 @@ $stmt->execute();
                     </form>
 
                      <form action="updatetask.php" method="POST">
-                        <input type="hidden" name="action" value="update_task">
+                        <input type="hidden" name="action" value="edit_task">
                         <input type="hidden" name="id" value="<?= htmlspecialchars($task['id']) ?>">
                         <button type="submit">Edit Task</button>
                     </form>
