@@ -27,9 +27,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 // TO check existing email if no errors
 if(empty($errors)){
 $stmt = $mysqli -> prepare('SELECT id FROM users WHERE email = ? LIMIT 1');
-$stmt -> bind_param('s',$email);
-$stmt -> execute();
-$stmt -> store_result();
+$stmt->bind_param('s',$email);
+$stmt->execute();
+$stmt->store_result();
 if($stmt -> num_rows > 0){
     $errors[] = "Email already registered";
 }

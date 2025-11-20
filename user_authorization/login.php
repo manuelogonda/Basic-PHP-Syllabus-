@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD' === 'POST']){
     $errors[] = 'Email and password are required';
   };
   if(empty($errors)){
-    $stmt = $mysql -> prepare('SELECT id, email, password FROM users WHERE email = ? LIMIT 1');
+    $stmt = $mysql->prepare('SELECT id, email, password FROM users WHERE email = ? LIMIT 1');
     $stmt->bind_param('s',$email);
     $stmt->execute();
     $result = $stmt -> get_result();
